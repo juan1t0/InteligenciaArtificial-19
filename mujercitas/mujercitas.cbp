@@ -45,8 +45,10 @@
 			<Add directory="D:/glut/lib" />
 		</Linker>
 		<Unit filename="include/Fichita.h" />
+		<Unit filename="include/MinMax.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Fichita.cpp" />
+		<Unit filename="src/MinMax.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
