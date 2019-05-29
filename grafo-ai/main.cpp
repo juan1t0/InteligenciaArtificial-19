@@ -17,6 +17,7 @@
 #define KEY_ADD 9 ///tab
 #define KEY_REMOV 8 ///retro
 #define KEY_INTRO 13
+#define KEY_SPACE 32
 
 using namespace std;
 void dfs(int,int,int,int);
@@ -186,6 +187,7 @@ GLvoid window_redraw(GLsizei width, GLsizei height) {
 	glLoadIdentity();
 
 }
+bool tech = 1;
 void load_path();
 GLvoid window_key(unsigned char key, int x, int y) {
 	switch (key) {
@@ -225,11 +227,16 @@ GLvoid window_key(unsigned char key, int x, int y) {
     case KEY_INTRO:{
         solu.clear();
         pinta.clear();
-        dfs(selected[0].first,selected[0].second,selected[1].first,selected[1].second);
-//        A_sterisco(selected[0].first,selected[0].second,selected[1].first,selected[1].second);
+        if(!tech)
+            dfs(selected[0].first,selected[0].second,selected[1].first,selected[1].second);
+        else
+            A_sterisco(selected[0].first,selected[0].second,selected[1].first,selected[1].second);
         load_path();
         cout<<"intro"<<endl;
         break;}
+    case KEY_SPACE:{
+        tech = !tech;
+    }
 	default:
 		break;
 	}
