@@ -1,1 +1,1 @@
-#Acc: 0.49 
+Resultado con InceptionResnetV2 : 0.49
